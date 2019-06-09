@@ -4,14 +4,7 @@
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   </div>
+
 <% end %>
 
-
-## perform a paginated query:
-@places.each = Post.paginate(page: params[:page])
-
-# or, use an explicit "per page" limit:
-Post.paginate(page: params[:page], per_page: 10)
-
-## render page links in the view:
-<%= will_paginate @places.each %>
+<%= will_paginate @places %>
