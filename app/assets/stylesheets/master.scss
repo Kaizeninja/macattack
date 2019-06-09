@@ -1,7 +1,8 @@
 
 
 @import "bootstrap";
-
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -19,7 +20,7 @@
 }
 
 body {
-  background: image_url('crossword.png');
+  background: image_url('bananas.png');
    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
@@ -30,6 +31,9 @@ body {
 
 .navbar-inverse .navbar-brand {
   color: #2344DD;
-  font-family: 'alex_brushregular';
+font-family: 'Play', sans-serif;
  font-size:26px;
 }
+ 
+
+
