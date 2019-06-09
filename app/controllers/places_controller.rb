@@ -20,5 +20,5 @@ end
 
 
 # or, use an explicit "per page" limit:
-Place.paginate(page: params[:page], per_page: 10)
+Places.paginate(page: params[:page], per_page: 10)
 
