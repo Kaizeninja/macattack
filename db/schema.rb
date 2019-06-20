@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2019_06_19_113817) do
     t.index ["user_id", "place_id"], name: "index_comments_on_user_id_and_place_id"
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "place_id"
+    t.string "caption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "Picture"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.text "description"
