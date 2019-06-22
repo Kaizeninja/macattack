@@ -71,7 +71,6 @@ gem "font-awesome-rails"
 gem 'will_paginate', '~> 3.1.1'
 gem 'devise'
 gem "geocoder"
-gem "figaro"
 gem 'carrierwave', '~> 1.0'
 gem "figaro"
 gem "fog-aws"
