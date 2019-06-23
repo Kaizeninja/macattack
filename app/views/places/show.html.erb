@@ -133,13 +133,12 @@
 </div>
 
 
-<div>
+ <% if @place.photos.present? %>
 <% @place.photos.each do |photo| %>
-  <div>
-    <%= image_tag photo.picture.url, class: 'show-image-size' %>
-  </div>
-  <div>
-   <%= photo.caption %>
+  <%= image_tag photo.picture.url %>
+  <%= photo.caption %>
+<% end %>
+<% end %>
  </div>
 <% end %>
 </div>
