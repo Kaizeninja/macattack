@@ -121,7 +121,7 @@
       <div class="modal-body">
        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <%= f.input :caption %>
-          <%= f.input :picture %>      
+          <%= f.file_field :picture %>      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -132,10 +132,13 @@
   </div>
 </div>
 
- <% if @place.photos.present? %>
+<div>
 <% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture %>
-  <%= photo.caption %>
-<% end %>
-<% end %>
+  <div>
+    <%= image_tag photo.picture, class: 'show-image-size' %>
+  </div>
+  <div>
+   <%= photo.caption %>
  </div>
+<% end %>
+</div>
