@@ -121,7 +121,7 @@
       <div class="modal-body">
        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <%= f.input :caption %>
-          <%= f.file_field :picture %>      
+          <%= f.input :picture %>      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
