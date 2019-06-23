@@ -135,7 +135,7 @@
 <div>
 <% @place.photos.each do |photo| %>
   <div>
-    <%= image_tag photo.picture, class: 'show-image-size' %>
+    <%= image_tag photo.picture.url, class: 'show-image-size' %>
   </div>
   <div>
    <%= photo.caption %>
