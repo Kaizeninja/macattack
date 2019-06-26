@@ -42,6 +42,12 @@
 
 <div class= "clear"></div>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  Add a comment
+</button>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -71,11 +77,6 @@
 <div class="col-10 offset-1">
 
 <h1 class="float-left">Comments</h1>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
-  Add a comment
-</button>
-</div>
 
 <div class="clear"></div>
 
@@ -84,7 +85,7 @@
   <div class="col-12 col-sm-6">
     <blockquote>
       <% if comment.humanized_rating.present? %>
-       <b><%= comment.humanized_rating %></b> - 
+       <b><%= comment.humanized_rating %></b> 
       <% end %>
       <%= comment.message %>
       <small><%= comment.user.email %></small>
@@ -108,10 +109,6 @@
 <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
   Add a photo
 </button>
-</div>
-<div class="clear"></div>
-
-<div class="row">
 
 <!-- Modal -->
 <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -136,18 +133,10 @@
   </div>
 </div>
 
-<div class="clear"></div>
-
-<div class="col-10 offset-1">
-
 
 <div>
 <% @place.photos.each do |photo| %>
-  <div>
-    <%= image_tag photo.picture, class: 'show-image-size' %>
-  </div>
-  <div>
-   <%= photo.caption %>
- </div>
+ <%= image_tag photo.picture.to_s, class: 'show-image-size' %>
+ <%= photo.caption %>
 <% end %>
 </div>
